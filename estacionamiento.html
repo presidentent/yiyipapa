@@ -224,32 +224,59 @@
     }
 
     
-    .centrado
-        {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+    .foto
+    {
+        text-align: center;
+    }
+        
+    .rectangulo2
+    {
+        
+        background: radial-gradient(circle, #000000, #222222, #444444);
+        border: 3px solid #444444;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        position: relative;
+        width: 90%;
+        height: 100%;
+        overflow: scroll;
+        scroll-snap-type: x mandatory;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        margin-top: 5%;
+    }
 
-        .imagen-container 
-        {
-            position: relative;
-            width: 450px;
-            height: 450px;
-            margin-top: 2%;
-        }
+    .rectangulo2 img
+    {
+        width: 80%;
+    }
 
-        .imagen 
-        {
-            width: 100%;
-            height: 100%;
-        }
+    .rectangulo2 h1
+    {
+        color: white;
+        font-size: xx-large;
+        font-weight: 700;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        text-align: center;
+        margin-top: 8%;
+    }
 
-        .imagen2
-        {
-            width: 450px;
-            height: 700px;
-        }
+    .rectangulo2 .imagen
+    {
+        text-align: center;
+        margin-top: 1%;
+        margin-bottom: 1%;
+    }
+
+    .centrar
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2%;
+    }
+
+
 
     
     </style>
@@ -271,15 +298,11 @@
     </nav>    
     </header>
 <main>
-    <div class="centrado">
-        <div class="imagen-container">
-            <img src="IMG/piso1.png" alt="Imagen" class="imagen" usemap="#croquis">
-            <img src="IMG/piso1-1.png" alt="" class="imagen2"><br>ㅤ<br>ㅤ<br>ㅤ<br>
+    <div class="centrar">
+        <div class="rectangulo2">
+        <h1 class="desc">Estacionamiento</h1>
+        <div class="imagen"><img src="IMG/Croquis/Estacionamiento.jpg"></div><br><br><br><br><br><br><br><br><br>
         </div>
-        <map name="croquis">
-            <area shape="rect" coords="354, 75, 438, 313" href="estacionamiento.html">
-            <area shape="rect" coords="200, 75, 350, 160" href="estacionamiento.html">
-        </map>
 <div class="fakefooter">
     <a href="eventosapp.html" class="a1"><i class="bi bi-megaphone"></i></a>
     <a href="inicio.html" class="a2"><i class="bi bi-person"></i><br></a>

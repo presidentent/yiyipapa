@@ -91,7 +91,7 @@
             top: 0;
             left: 0;
             padding-top: 1rem;
-            background: linear-gradient(#5a1616, #8c3939, #6b2231);
+            background: linear-gradient(#000000, #222222);
             bottom: 0;
             box-shadow: 0 0 0 100vmax rgba(0,0,0,0.5 );
             visibility: hidden;
@@ -147,7 +147,7 @@
       font-size: 1.5rem;
       cursor: pointer;
       z-index: 10;
-      background: #6b2231;
+      background: linear-gradient(#000000, #222222);
       text-align: left;
       transition: 300ms all;
       z-index: 11;
@@ -180,16 +180,18 @@
     {
       z-index: -5;
       position: absolute;
-      background: #6b2231;
+      background: linear-gradient(#000000, #222222);
       width: 100%;
       font-size: 2.1rem;
+      color: white;
+      text-align: center;
     }
 
     .fakefooter
     {
         position: fixed;
         bottom: 0;
-        background: #6b2231;
+        background: linear-gradient(#000000, #222222);
         width: 100%;
         display: flex;
         justify-content: center;
@@ -225,7 +227,7 @@
 <body>
 <div class="cuerpo">
     <header>
-    <h2 class="fondito">ㅤ</h2><button class="abrir" id="abrir"><i class="bi bi-list"></i></button>
+    <h2 class="fondito">Inicio</h2><button class="abrir" id="abrir"><i class="bi bi-list"></i></button>
     <nav class="nav" id="nav">
     <button id="cerrar" class="cerrar"><i class="bi bi-x-lg"></i></button>
     <ul class="nav-list">
@@ -249,7 +251,7 @@
     </div>
 <div class="fakefooter">
     <a href="eventosapp.html" class="a1"><i class="bi bi-megaphone"></i></a>
-    <a href="inicio.html" class="a2"><i class="bi bi-house-door"></i><br></a>
+    <a href="inicio.html" class="a2"><i class="bi bi-person-fill"></i></i><br></a>
     <a href="croquisapp.html" class="a3"><i class="bi bi-geo-alt"></i><br></a>
 </div>
 </main>
