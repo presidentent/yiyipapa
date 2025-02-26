@@ -269,4 +269,11 @@
       nav.classList.remove("nav-visible")
     })
   </script>
+  <script>
+    document.addEventListener('touchstart', function(event) {
+      if (event.touches.length > 1) {
+        event.preventDefault(); // Prevenir el gesto de pellizcar (zoom)
+      }
+    }, { passive: false });
+  </script>
 </html>
