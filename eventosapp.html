@@ -253,11 +253,11 @@
 <main>
     <div class="info">
         <br><h1>El Festival Academico Comienza, <br> mediante un examen en linea grupos <br> de Segundo, Cuarto y Sexto semestre <br> participan en el Festival Academico</h1> <br>
-        <img src="IMG/olimpiadas.jfif" width="400px"><br><hr><br>
+        <img src="IMG/olimpiadas.jfif" width="350px"><br><hr><br>
         <h1>Este 8 de Marzo es reconocido <br> internacionalmente como el dia de <br> la mujer, en el cual se conmemora <br> la lucha de las mujeres por su <br> participacion en la sociedad</h1>
-        <img src="IMG/diamujer.png" alt="" width="400px"> <br><hr><br>
+        <img src="IMG/diamujer.png" alt="" width="350px"> <br><hr><br>
         <h1>Valor del mes de Febrero</h1>
-        <img src="IMG/valor.jfif" alt="" width="400px"><br><hr><br>
+        <img src="IMG/valor.jfif" alt="" width="350px"><br><hr><br>
         <br><br><br>
     </div>
     
@@ -289,4 +289,16 @@
       }
     }, { passive: false });
   </script>
+
+    <script>
+        // Detectar si el usuario ha llegado al final de la página
+window.addEventListener('touchmove', function(event) {
+    // Verifica si el desplazamiento está en la parte inferior de la página
+    if (window.innerHeight + window.scrollY >= document.body.scrollHeight) {
+        // Evitar el desplazamiento hacia abajo
+        event.preventDefault();
+    }
+});
+
+    </script>
 </html>
