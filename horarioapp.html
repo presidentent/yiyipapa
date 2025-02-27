@@ -222,16 +222,58 @@
     {
         text-align: center;
     }
+
+    
+    .imagen
+        {
+            
+            width: 100%;
+        }
+
+        .rectangulo {
+            width: 95%;
+            height: 100%;
+            background: radial-gradient(circle, #000000, #222222, #444444);
+            border: 3px solid #444444;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .rectangulo h3 img
+        {
+            width: 95%;
+        }
+
+        .horariosc
+        {
+            
+            text-align: center;
+        }
+
+        .horariosc h6
+        {
+            font-size: xx-large;
+            text-align: center;
+        }
+
+        .centrarrect
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        
     </style>
 </head>
 <body>
 <div class="cuerpo">
     <header>
-    <h2 class="fondito">Inicio</h2><button class="abrir" id="abrir"><i class="bi bi-list"></i></button>
+    <h2 class="fondito">Horario</h2><button class="abrir" id="abrir"><i class="bi bi-list"></i></button>
     <nav class="nav" id="nav">
     <button id="cerrar" class="cerrar"><i class="bi bi-x-lg"></i></button>
     <ul class="nav-list">
-        <li><a href="inicio.html"><i class="bi bi-house-door-fill"></i> Inicio</i></a></li>
+        <li><a href="inicio.html"><i class="bi bi-house-door"></i> Inicio</i></a></li>
         <li><a href="eventosapp.html"><i class="bi bi-megaphone"></i> Eventos/Anuncios</a></li>
         <li><a href="Buzonapp.html"><i class="bi bi-mailbox-flag"></i> Buzon de Quejas</a></li>
         <li><a href="problema.html"><i class="bi bi-exclamation-octagon"></i> Reportar Problema</a></li>
@@ -241,19 +283,41 @@
     </nav>    
     </header>
 <main>
-    <div class="fotito"><img src="IMG/minion.jpg" alt=""></div>
-    <div class="nombre">
-        <h1>Aguirre Flores Sergio Josue Manuel</h1> <br>
-        <h1>22402080194658</h1> <br>
-        <h1>Plantel Los Pinos</h1> <br>
-        <h1>Programacion</h1> <br>
-        <h1>6APGM</h1>
+    <div class="horariosc">
+    <form>
+        <h6>Selecciona un Grupo</h6>
+        <select id="horario">
+            <option disabled selected>Seleccionar</option>
+            <optgroup label="Primeros"></optgroup>
+            <option value="imagen1">2APGM</option>
+            <option value="imagen2">2AMT</option>
+            <option value="imagen3">2API</option>
+            <option value="imagen4">2AMS</option>
+            <optgroup label="Terceros"></optgroup>
+            <option value="imagen5">4APGM</option>
+            <option value="imagen6">4AMT</option>
+            <option value="imagen7">4API</option>
+            <option value="imagen8">4AMS</option>
+            <optgroup label="Quintos"></optgroup>
+            <option value="imagen9">6APGM</option>
+            <option value="imagen10">6AMT</option>
+            <option value="imagen11">6API</option>
+            <option value="imagen12">6AMUS</option>
+            <optgroup label="Asesorias"></optgroup>
+            <option value="imagen13">Asesorias</option>
+        </select>
+    </form>
+    <div class="centrarrect">
+    <div class="rectangulo">
+        <img src="IMG/invisible.png" class="imagen" id="imagen">
     </div>
+</div>
+</div>
 <div class="fakefooter">
     <a href="eventosapp.html" class="a1"><i class="bi bi-megaphone"></i></a>
     <a href="croquisapp.html" class="a3"><i class="bi bi-geo-alt"></i><br></a>
-    <a href="inicio.html" class="a2"><i class="bi bi-person-fill"></i><br></a>
-    <a href="horarioapp.html" class="a4"><i class="bi bi-clock"></i><br></a>
+    <a href="inicio.html" class="a2"><i class="bi bi-person"></i><br></a>
+    <a href="horarioapp.html" class="a4"><i class="bi bi-clock-fill"></i><br></a>
     <a href="boletaapp.html" class="a5"><i class="bi bi-star"></i><br></a>
 </div>
 </main>
@@ -277,5 +341,67 @@
         event.preventDefault(); // Prevenir el gesto de pellizcar (zoom)
       }
     }, { passive: false });
+  </script>
+
+  <script>
+    const opciones = document.getElementById('horario');
+    const imagen = document.getElementById('imagen');
+
+    opciones.addEventListener('change', function()
+    {
+     const seleccion = opciones.value;
+     if(!opciones) 
+     {
+        imagen.style.display = 'none';
+        return;
+     }   
+
+     switch(seleccion) 
+     {
+        case 'imagen1': imagen.src = 'IMG/1A.jpg'
+        break
+
+        case 'imagen2': imagen.src = 'IMG/1B.jpg'
+        break
+
+        case 'imagen3': imagen.src = 'IMG/1C.jpg'
+        break
+
+        case 'imagen4': imagen.src = 'IMG/1D.jpg'
+        break
+
+        case 'imagen5': imagen.src = 'IMG/3APGM.jpg'
+        break
+
+        case 'imagen6': imagen.src = 'IMG/3AMT.jpg'
+        break
+
+        case 'imagen7': imagen.src = 'IMG/3API.jpg'
+        break
+
+        case 'imagen8': imagen.src = 'IMG/3AMS.jpg'
+        break
+
+        case 'imagen9': imagen.src = 'IMG/5APGM.jpg'
+        break
+
+        case 'imagen10': imagen.src = 'IMG/5AMT.jpg'
+        break
+
+        case 'imagen11': imagen.src = 'IMG/5API.jpg'
+        break
+
+        case 'imagen12': imagen.src = 'IMG/5AMUS.jpg'
+        break
+
+        case 'imagen13': imagen.src = 'IMG/Asesorias.jpg'
+        break
+
+        default: imagen.style.display = 'none'
+        return;
+     }
+
+     imagen.style.display = 'block';
+    })
   </script>
 </html>

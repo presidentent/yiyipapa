@@ -259,6 +259,82 @@
             height: 700px;
         }
 
+    .rectangulo2 img
+    {
+        width: 80%;
+    }
+
+    .rectangulo2 h1
+    {
+        color: white;
+        font-size: xx-large;
+        font-weight: 700;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        text-align: center;
+        margin-top: 8%;
+    }
+
+    .rectangulo2 .imagen3
+    {
+        text-align: center;
+        margin-top: 1%;
+        margin-bottom: 1%;
+    }
+
+    .centrar
+    {
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2%;
+        width: 100%;
+        height: 200%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: none;
+        z-index: 1;
+    }
+
+    
+    .rectangulo2
+    {
+        
+        background: radial-gradient(circle, #000000, #222222, #444444);
+        border: 3px solid #444444;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        position: fixed;
+        overflow: scroll;
+        scroll-snap-type: x mandatory;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        margin-top: 5%;
+        position: fixed;
+        z-index: 2;
+        display: none;
+        
+    }
+
+    .area15
+        {
+            position: absolute;
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .area-15
+        {
+            top: 70px;
+            left: 276px;
+            width: 60px;
+            height: 180px;
+            background-color: #d9d9d9;
+            clip-path: polygon(54% 10%, 100% 19%, 100% 100%, 0 100%, 0 0);
+            
+        }
+
+
+
     
     </style>
 </head>
@@ -269,29 +345,35 @@
     <nav class="nav" id="nav">
     <button id="cerrar" class="cerrar"><i class="bi bi-x-lg"></i></button>
     <ul class="nav-list">
-    <li><a href="index.html"><i class="bi bi-house-door"></i> Inicio</i></a></li>
-    <li><a href="index.html"><i class="bi bi-geo-alt"></i> Croquis</a></li>
-    <li><a href="index.html"><i class="bi bi-megaphone"></i> Eventos</a></li>
-    <li><a href="index.html"><i class="bi bi-clock"></i> Horario</a></li>
-    <li><a href="index.html"><i class="bi bi-info-circle"></i> Información</a></li>
-    <li><a href="index.html"><i class="bi bi-question-circle"></i> Preguntas</a></li>
+        <li><a href="inicio.html"><i class="bi bi-house-door"></i> Inicio</i></a></li>
+        <li><a href="eventosapp.html"><i class="bi bi-megaphone"></i> Eventos/Anuncios</a></li>
+        <li><a href="Buzonapp.html"><i class="bi bi-mailbox-flag"></i> Buzon de Quejas</a></li>
+        <li><a href="problema.html"><i class="bi bi-exclamation-octagon"></i> Reportar Problema</a></li>
+        <li><a href="preguntasapp.html"><i class="bi bi-question-circle"></i> Preguntas de Usuarios</a></li>
+        <li><a href="configuracion.html"><i class="bi bi-gear"></i> Configuracion</a></li>
     </ul>
     </nav>    
     </header>
 <main>
     <div class="centrado">
         <div class="imagen-container">
-            <img src="IMG/piso1.png" alt="Imagen" class="imagen" usemap="#croquis">
+            <img src="IMG/piso1.png" alt="Imagen" class="imagen">
             <img src="IMG/piso1-1.png" alt="" class="imagen2"><br>ㅤ<br>ㅤ<br>ㅤ<br>
+            <div class="area15 area-15" onclick="popup()"></div>
         </div>
-        <map name="croquis">
-            <area shape="rect" coords="354, 75, 438, 313" href="estacionamiento.html">
-            <area shape="rect" coords="200, 75, 350, 160" href="estacionamiento.html">
-        </map>
+        <div class="centrar" id="popup">
+            
+        </div>
+        <div class="rectangulo2" id="popup2">
+            <h1 class="desc">Estacionamiento</h1>
+            <div class="imagen3"><img src="IMG/Croquis/Estacionamiento.jpg"></div><br><br><br><br><br><br><br><br><br>
+            </div>
 <div class="fakefooter">
     <a href="eventosapp.html" class="a1"><i class="bi bi-megaphone"></i></a>
-    <a href="inicio.html" class="a2"><i class="bi bi-person"></i><br></a>
     <a href="croquisapp.html" class="a3"><i class="bi bi-geo-alt-fill"></i><br></a>
+    <a href="inicio.html" class="a2"><i class="bi bi-person"></i><br></a>
+    <a href="horarioapp.html" class="a4"><i class="bi bi-clock"></i><br></a>
+    <a href="boletaapp.html" class="a5"><i class="bi bi-star"></i><br></a>
 </div>
 </main>
 </body>
@@ -315,5 +397,26 @@
         event.preventDefault(); // Prevenir el gesto de pellizcar (zoom)
       }
     }, { passive: false });
+  </script>
+
+  <script>
+    function popup()
+        {
+            const popup = document.getElementById("popup");
+            const popup2 = document.getElementById("popup2");
+            popup.style.display = "block";
+            popup2.style.display = "block";
+
+            window.onclick = function(event) {
+    if (event.target === popup) {
+        popup.style.display = "none";
+        popup2.style.display = "none";
+    }
+}
+
+
+}
+            
+        
   </script>
 </html>
