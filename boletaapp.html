@@ -20,12 +20,13 @@
         body
         {
             font-family: Legend;
+            height: 100%;
+            overflow: visible;
+            background: linear-gradient(#222222, #444444, #666666);
             background-size: cover;
             background-position: center top;
             background-repeat: no-repeat;
             background-attachment: fixed;
-            height: 100%;
-            overflow: visible;
         }
         header
         {
@@ -91,7 +92,7 @@
             top: 0;
             left: 0;
             padding-top: 1rem;
-            background: linear-gradient(#000000, #222222);
+            background: black;
             bottom: 0;
             box-shadow: 0 0 0 100vmax rgba(0,0,0,0.5 );
             visibility: hidden;
@@ -122,7 +123,7 @@
     .nav-list li a
     {
       text-decoration: none;
-      color: white;
+      color: #B8945B;
       font-weight: 700;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
       transition: 300ms;
@@ -147,17 +148,17 @@
       font-size: 1.5rem;
       cursor: pointer;
       z-index: 10;
-      background: linear-gradient(#000000, #222222);
+      background: black;
       text-align: left;
       transition: 300ms all;
       z-index: 11;
-      color: white;
+      color: #B8945B;
     }
 
     .abrir:hover
     {
         transition: 300ms all;
-        color: black;
+        color: white;
     }
 
     .cerrar
@@ -167,20 +168,20 @@
       background: transparent;
       cursor: pointer;
       transition: 300ms;
-      color: white;
+      color: #B8945B;
     }
 
     .cerrar:hover
     {
         transition: 300ms;
-        color: black;
+        color: white;
     }
 
     .fondito
     {
       z-index: -5;
       position: absolute;
-      background: linear-gradient(#000000, #222222);
+      background: black;
       width: 100%;
       font-size: 2.1rem;
       color: white;
@@ -197,15 +198,26 @@
         justify-content: center;
     }
 
-    .fakefooter a
+    .fakefooter i
     {
-        color: white;
+        color: #B8945B;
         font-size: xx-large;
         text-decoration: none;
         padding: 10px 20px;  
         margin: 0 1%;  
         border-radius: 5px;
         transition: background-color 0.3s;
+    }
+
+    .fakefooter a
+    {
+        color: #B8945B;
+        font-size: medium;
+        text-decoration: none;
+        margin: 0 1%;  
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        text-align: center;
     }
 
     .fotito
@@ -235,7 +247,7 @@
             width: 95%;
             height: 100%;
             background: radial-gradient(circle, #000000, #222222, #444444);
-            border: 3px solid #444444;
+            border: 3px solid black;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
@@ -255,6 +267,7 @@
         {
             font-size: xx-large;
             text-align: center;
+            color: white;
         }
 
         .centrarrect
@@ -263,12 +276,18 @@
             justify-content: center;
             align-items: center;
         }
+
+        .punto
+    {
+        color: #B8945B;
+        font-size: x-large;
+    }
     </style>
 </head>
 <body>
 <div class="cuerpo">
     <header>
-    <h2 class="fondito">Boleta</h2><button class="abrir" id="abrir"><i class="bi bi-list"></i></button>
+    <h2 class="fondito"><span class="inicio">Boleta </span><span class="punto">◉</span></h2><button class="abrir" id="abrir"><i class="bi bi-list"></i></button>
     <nav class="nav" id="nav">
     <button id="cerrar" class="cerrar"><i class="bi bi-x-lg"></i></button>
     <ul class="nav-list">
@@ -304,11 +323,11 @@
     </div>
     </div>
 <div class="fakefooter">
-    <a href="eventosapp.html" class="a1"><i class="bi bi-megaphone"></i></a>
-    <a href="croquisapp.html" class="a3"><i class="bi bi-geo-alt"></i><br></a>
-    <a href="inicio.html" class="a2"><i class="bi bi-person"></i><br></a>
-    <a href="horarioapp.html" class="a4"><i class="bi bi-clock"></i><br></a>
-    <a href="boletaapp.html" class="a5"><i class="bi bi-star-fill"></i><br></a>
+    <a href="eventosapp.html" class="a1"><i class="bi bi-megaphone"></i> <br> ANUNCIOS</a>
+    <a href="croquisapp.html" class="a3"><i class="bi bi-geo-alt"></i><br> CROQUIS</a>
+    <a href="inicio.html" class="a2"><i class="bi bi-person"></i><br> PERFIL</a>
+    <a href="horarioapp.html" class="a4"><i class="bi bi-clock"></i><br> HORARIOS</a>
+    <a href="boletaapp.html" class="a5"><i class="bi bi-star-fill"></i><br> BOLETA</a>
 </div>
 </main>
 </body>

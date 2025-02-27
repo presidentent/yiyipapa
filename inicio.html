@@ -20,12 +20,13 @@
         body
         {
             font-family: Legend;
+            height: 100%;
+            overflow: visible;
+            background: linear-gradient(#222222, #444444, #666666);
             background-size: cover;
             background-position: center top;
             background-repeat: no-repeat;
             background-attachment: fixed;
-            height: 100%;
-            overflow: visible;
         }
         header
         {
@@ -91,7 +92,7 @@
             top: 0;
             left: 0;
             padding-top: 1rem;
-            background: linear-gradient(#000000, #222222);
+            background: black;
             bottom: 0;
             box-shadow: 0 0 0 100vmax rgba(0,0,0,0.5 );
             visibility: hidden;
@@ -147,7 +148,7 @@
       font-size: 1.5rem;
       cursor: pointer;
       z-index: 10;
-      background: linear-gradient(#000000, #222222);
+      background: black;
       text-align: left;
       transition: 300ms all;
       z-index: 11;
@@ -157,7 +158,7 @@
     .abrir:hover
     {
         transition: 300ms all;
-        color: black;
+        color: white;
     }
 
     .cerrar
@@ -167,20 +168,20 @@
       background: transparent;
       cursor: pointer;
       transition: 300ms;
-      color: white;
+      color: #B8945B;
     }
 
     .cerrar:hover
     {
         transition: 300ms;
-        color: black;
+        color: white;
     }
 
     .fondito
     {
       z-index: -5;
       position: absolute;
-      background: linear-gradient(#000000, #222222);
+      background: black;
       width: 100%;
       font-size: 2.1rem;
       color: white;
@@ -197,7 +198,7 @@
         justify-content: center;
     }
 
-    .fakefooter a
+    .fakefooter i
     {
         color: #B8945B;
         font-size: xx-large;
@@ -208,6 +209,17 @@
         transition: background-color 0.3s;
     }
 
+    .fakefooter a
+    {
+        color: #B8945B;
+        font-size: medium;
+        text-decoration: none;
+        margin: 0 1%;  
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        text-align: center;
+    }
+
     .fotito
     {
         text-align: center;
@@ -216,18 +228,59 @@
     .fotito img
     {
         border-radius: 100%;
+        border: 2px solid black;
     }
 
     .nombre
     {
         text-align: center;
+        color: white;
     }
+
+    hr
+    {
+        border: 2px solid black;
+    }
+
+    .datos
+    {
+        text-align: left;
+        margin-left: 5%;
+    }
+
+    .datos h3
+    {
+        color: white;
+    }
+
+    .datos h1
+    {
+        color: white;
+    }
+
+    .datos i
+    {
+        color: #B8945B;
+    }
+
+    .fondito i
+    {
+        color: #B8945B;
+        font-size: small;
+    }
+
+    .punto
+    {
+        color: #B8945B;
+        font-size: x-large;
+    }
+
     </style>
 </head>
 <body>
 <div class="cuerpo">
     <header>
-    <h2 class="fondito">Inicio</h2><button class="abrir" id="abrir"><i class="bi bi-list"></i></button>
+    <h2 class="fondito"><span class="inicio">Inicio </span><span class="punto">◉</span></h2><button class="abrir" id="abrir"><i class="bi bi-list"></i></button>
     <nav class="nav" id="nav">
     <button id="cerrar" class="cerrar"><i class="bi bi-x-lg"></i></button>
     <ul class="nav-list">
@@ -241,20 +294,26 @@
     </nav>    
     </header>
 <main>
-    <div class="fotito"><img src="IMG/minion.jpg" alt=""></div>
-    <div class="nombre">
-        <h1>Aguirre Flores Sergio Josue Manuel</h1> <br>
+    <div class="fotito"><img src="IMG/minion.jpg" alt=""></div> <br>
+    <h1 class="nombre">Aguirre Flores Sergio Josue Manuel</h1>
+    <hr><br>
+    <div class="datos">
+        <br>
+        <h3><i class="bi bi-person-vcard-fill"></i> Matricula</h3>
         <h1>22402080194658</h1> <br>
-        <h1>Plantel Los Pinos</h1> <br>
+        <h3><i class="bi bi-buildings-fill"></i> Plantel</h3>
+        <h1>Los Pinos</h1> <br>
+        <h3><i class="bi bi-mortarboard-fill"></i> Carrera</h3>
         <h1>Programacion</h1> <br>
+        <h3><i class="bi bi-person-lines-fill"></i> Grupo</h3>
         <h1>6APGM</h1>
     </div>
 <div class="fakefooter">
-    <a href="eventosapp.html" class="a1"><i class="bi bi-megaphone"></i></a>
-    <a href="croquisapp.html" class="a3"><i class="bi bi-geo-alt"></i><br></a>
-    <a href="inicio.html" class="a2"><i class="bi bi-person-fill"></i><br></a>
-    <a href="horarioapp.html" class="a4"><i class="bi bi-clock"></i><br></a>
-    <a href="boletaapp.html" class="a5"><i class="bi bi-star"></i><br></a>
+    <a href="eventosapp.html" class="a1"><i class="bi bi-megaphone"></i> <br> ANUNCIOS</a>
+    <a href="croquisapp.html" class="a3"><i class="bi bi-geo-alt"></i><br> CROQUIS</a>
+    <a href="inicio.html" class="a2"><i class="bi bi-person-fill"></i><br> PERFIL</a>
+    <a href="horarioapp.html" class="a4"><i class="bi bi-clock"></i><br> HORARIOS</a>
+    <a href="boletaapp.html" class="a5"><i class="bi bi-star"></i><br> BOLETA</a>
 </div>
 </main>
 </body>
